@@ -1,0 +1,54 @@
+﻿@model WebServer.Models.Parameter
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Parameter</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.parameterTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.parameterTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.parameterLogic)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.parameterLogic)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.parameterValue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.parameterValue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sensor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sensor.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.device)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.device.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.automation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.automation.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

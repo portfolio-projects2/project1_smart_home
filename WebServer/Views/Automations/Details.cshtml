@@ -1,0 +1,73 @@
+﻿@using Newtonsoft.Json.Linq
+@model WebServer.Models.Automation
+
+@{
+    ViewData["Title"] = "Details";
+    Automation automation = ViewBag.automation;
+    ProjectDbContext context = ViewBag.context;
+    JObject timeRangeJson = JObject.Parse(automation.automationTimeRange);
+
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Automation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.active)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.active)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.automationTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.automationTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.automationTimeRange)
+        </dt>
+        <dd class = "col-sm-10">
+         <p > StartTime:<text style="color:green">  @timeRangeJson.GetValue("start") </text>OffTime: <text style="color:red"> @timeRangeJson.GetValue("off")</text> </p>
+        </dd>
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.automationDevices)
+        </dt>
+        <dd class = "col-sm-10">
+            @foreach(var a in automation.automationDevices)
+            {
+                <p>Device : @a.deviceName || Room: @context.Room.Where(r=>r.Id==a.roomId).ToList().Last().roomTitle </p>
+            }
+            
+        </dd>
+               <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.automationSensors)
+        </dt>
+        <dd class = "col-sm-10">
+            
+            @foreach(var a in automation.automationSensors)
+            {
+                <p>Sensor : @a.sensorName || Room: @context.Room.Where(r=>r.Id==a.roomId).ToList().Last().roomTitle </p>
+
+            }
+            
+        </dd>
+             <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.automationRooms)
+        </dt>
+        <dd class = "col-sm-10">
+            @foreach(var a in automation.automationRooms)
+            {
+                <p>@a.roomTitle </p>
+            }
+            
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

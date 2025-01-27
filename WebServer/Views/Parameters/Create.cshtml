@@ -1,0 +1,389 @@
+﻿
+
+@using Microsoft.EntityFrameworkCore
+@using Newtonsoft.Json.Linq
+@using System.Diagnostics
+@model WebServer.Models.Automation
+
+@{
+    ProjectDbContext _context = ViewBag.context;
+    int automationId = @ViewBag.automationId;
+    string automationTitle = _context.Automation.Where(a => (a.Id == automationId)).ToList().Last().automationTitle;
+   
+
+    ViewData["Title"] = "automationParameters";
+   // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    //Getting the automation from the database
+    Automation  automation = _context.Automation.Where(a => a.Id == automationId).Include(a => a.automationSensors ).
+     Include(a=>a.automationRooms).
+     Include(a=>a.automationDevices).FirstOrDefault();
+
+    List<Room> rooms = automation.automationRooms.ToList();
+    List<Sensor> sensors = automation.automationSensors.ToList();
+    List<Device> devices = automation.automationDevices.ToList();
+
+    
+    //Map to save output properties
+    Dictionary<int, string> roomDevices = new Dictionary<int,string>();
+    foreach(var a in devices)
+    {
+        roomDevices.Add(a.Id, _context.Room.Where(f => (f.Id == a.roomId)).ToList().Last().roomTitle + " /" + a.deviceName);
+    }
+
+    //Behavior map
+    Dictionary<string, string> behavior = new Dictionary<string, string>(){ 
+        { "turn on device if sensor value is between two values", "onBetween" } ,
+         { "turn on device if sensor value is only parameter value", "ononly" } ,
+
+    };
+}
+
+
+  <head>
+ <link rel="stylesheet" href=~/css/createParameterPage.css/>
+
+  </head>
+       
+
+ <body>
+   
+
+<h1 >Set parameters for Automation : <text class="automationTitle"> @automationTitle </text></h1>
+<p>Here you can add Automation parameters.  </p>
+<p>You can add parameters to control the physical devices defined in this automation process based on sensors of your choice.</p>
+<p>You can make the device turns on ehither between two sensor's values or on one sensor value.</p>
+<p>You can only add parameters as the numbers of the devices included in this automation process.</p>
+<p>If you select a device for a parameter, you cant choose for other parameters.</p>
+ <a class="backParList" href="/parameters">Back to Parameters List</a>
+<div id="mainDiv">
+    <h1 class="roomTitle">Rooms List</h1>
+   
+    <ul class="roomUl" >
+        @foreach(var a in rooms)    
+        {
+            
+            <li>
+                <div class="roomTitle">@a.roomTitle</div>
+
+            <ul class="sensorsUl">
+                    @foreach(var b in sensors)
+                    { if(b.roomId==a.Id ){
+                        
+                        <li class="allLi">
+                            
+                           <div class="sensorName"> <p id="addParameterText"> Add parameters for sensor </p> <p style="color:#41464b;">@b.sensorName</p><textarea class="parameterText" id="parameterText_@b.Id"  ></textarea><button class="addParameterButton" onclick=addParameter('@a.Id','@b.Id','@b.sensorName')>Add</button>   </div> 
+                            <ul id="ul_@b.Id" >               
+
+                            </ul>
+                        </li>
+                    }}
+
+            </ul>            
+            </li>
+        }
+        </ul>
+    
+</div>
+<button onclick=saveAutomation()>Save Automation Parameters </button>
+
+</body>
+<script>
+var mainDiv = document.getElementById("mainDiv")
+// delete selected device from other select elements
+mainDiv.addEventListener("change", function ulListener(event) {
+
+	if (event.target.matches("select.selectDevice")) {
+		var selectedDevice = event.target.value
+		var otherSelects = document.querySelectorAll('select.selectDevice:not(#' + event.target.id + ')')
+		console.log(otherSelects)
+		otherSelects.forEach(function(selectElement) {
+			console.log(selectElement)
+			var otherSelectOptions = selectElement.options
+			for (var i = 0; i < selectElement.options.length; i++) {
+				if (otherSelectOptions[i].value === selectedDevice) {
+					otherSelectOptions[i].remove()
+				}
+
+			}
+
+
+		})
+
+	}
+
+})
+
+var parametersCount = 0
+var selectCounter = 0
+
+function addParameter(roomId, sensorId, sensorName) {
+	//ensure parameter Title not empty
+	if(document.getElementById(`parameterText_${sensorId}`).value===""){
+			alert("you need to set a title for each parameter")
+		}else{
+	// ensure number of parameters= number of devices
+	if (@devices.Count > parametersCount) {
+		parametersCount++
+		var ul = document.getElementById(`ul_${sensorId}`)
+
+		var li = document.createElement("li")
+		var div1 = document.createElement("div")
+		div1.setAttribute("class", "parameterTitle")
+		div1.append("")
+		var text = document.createElement("text")
+		text.setAttribute("class", "parameterText")
+		text.append(document.getElementById(`parameterText_${sensorId}`).value)
+		div1.append(text)
+		li.append(div1)
+		var div2 = document.createElement("div")
+		var text2 = document.createElement("p")
+		text2.setAttribute("class", "setValueText")
+		text2.append("set the value of this parameter :")
+		text2.style.display = "none"
+		var textarea = document.createElement("textarea")
+		textarea.setAttribute("placeholder", "Enter the value here")
+		textarea.setAttribute("sensor", `${sensorId}`)
+		textarea.setAttribute("class", `textereaParameterValue`)
+		textarea.style.display = "none"
+		var text3 = document.createElement("p")
+		text3.setAttribute("class", "setValueText")
+		text3.append("set the value of this parameter :")
+		text3.style.display = "none"
+		var textarea1 = document.createElement("textarea")
+		textarea1.setAttribute("placeholder", "Enter the first value here")
+		textarea1.setAttribute("sensor", `${sensorId}`)
+		textarea1.setAttribute("class", `firstValue`)
+		textarea1.style.display = "none"
+		var textarea2 = document.createElement("textarea")
+		textarea2.setAttribute("placeholder", "Enter the second value here")
+		textarea2.setAttribute("sensor", `${sensorId}`)
+		textarea2.setAttribute("class", `secondValue`)
+		textarea2.style.display = "none"
+		div2.append(text2)
+		div2.append(text3)
+		div2.append(textarea1)
+		div2.append(textarea2)
+		div2.append(textarea)
+
+		var div3 = document.createElement("div")
+		var text4 = document.createElement("p")
+		text4.append("select the related device ")
+		text4.setAttribute("style", " margin-bottom: 10px;font-size: 17px;color: #525066;font-weight:600;")
+
+		div3.append(text4)
+		var select = document.createElement("select")
+		select.setAttribute("class", "selectDevice")
+		selectCounter++
+		select.setAttribute("id", `select${sensorId}${selectCounter}`)
+		//Getting all devices for this automation
+		var dictionary = @Json.Serialize(@roomDevices);
+		var emptyOption = document.createElement("option")
+		emptyOption.setAttribute("value", `""selected disabled hidden`)
+		emptyOption.append("choose here")
+		var emptyOption2 = document.createElement("option")
+		emptyOption.setAttribute("value", `""selected disabled hidden`)
+		emptyOption.append("choose here")
+		emptyOption2.append('Select Device')
+		select.append(emptyOption2)
+		//get all selects to avoid duplicated options
+		var allSelects = document.querySelectorAll("select.selectDevice")
+		var selectedOptions = []
+		allSelects.forEach(function(selectElement) {
+			selectedOptions.push(selectElement.options[selectElement.selectedIndex].value)
+		})
+		//for each device in the devices map add options to the selects
+		for (var key in dictionary) {
+
+			var option = document.createElement("option")
+			option.setAttribute("id", `option${key}`)
+			option.setAttribute("deviceId", `${key}`)
+			option.setAttribute("sensorId", `${sensorId}`)
+			option.setAttribute("sensorName", `${sensorName}`)
+			option.append(dictionary[key])
+			if (!selectedOptions.includes(option.value)) {
+				select.append(option)
+
+			}
+		}
+
+		div3.append(select)
+		li.append(div3)
+		var div4 = document.createElement("div")
+		var text4 = document.createElement("p")
+		text4.append("select the intended behavior of the device")
+		text4.setAttribute("style", " margin-bottom: 10px;font-size: 17px;color: #525066;font-weight:600;margin-top: 10px;")
+		div4.append(text4)
+		var select2 = document.createElement("select")
+		var option1 = document.createElement("option")
+		option1.setAttribute("id", "onOnly")
+		var option2 = document.createElement("option")
+		option2.setAttribute("id", "onBetween")
+		option1.append("turn on device if sensor value is only this value")
+		option2.append("turn on device if sensor value is between two values")
+		select2.append(emptyOption)
+		select2.append(option1)
+		select2.append(option2)
+		var removeButton = document.createElement("button")
+		removeButton.append("removeParameter")
+		removeButton.setAttribute("onclick", `removePar(${sensorId})`)
+		removeButton.setAttribute("class", "removeParameterButton")
+		div4.append(select2)
+		li.append(div4)
+		li.setAttribute("class", "parameterLi")
+		li.setAttribute("id", `par${sensorId}`)
+		li.append(div2)
+		li.append(removeButton)
+		ul.append(li)
+
+		// show to text erea if two values selected
+		select2.addEventListener("change", function() {
+			console.log(select2.value)
+			if (select2.value == "turn on device if sensor value is only this value") {
+				textarea1.style.display = "none"
+				textarea2.style.display = "none"
+				text3.style.display = "none"
+				textarea.style.display = "block"
+				text2.style.display = "block"
+
+
+
+			} else if (select2.value == "turn on device if sensor value is between two values") {
+
+				textarea1.style.display = "block"
+				textarea2.style.display = "block"
+				text3.style.display = "block"
+				textarea.style.display = "none"
+				text2.style.display = "none"
+
+			}
+
+		})
+
+
+
+	}
+}}
+
+
+
+
+function saveAutomation() {
+	var parametersList = []
+	var parameterObject = {}
+	// all li elements
+	var liList = document.getElementsByClassName("parameterLi")
+
+
+	for (var i = 0; i < liList.length; i++) {
+
+		var selectDeviceIndex = liList[i].childNodes[1].childNodes[1].options.selectedIndex
+		var selectLogicIndex = liList[i].childNodes[2].childNodes[1].options.selectedIndex
+		var parameterTitle = liList[i].childNodes[0].childNodes[1].childNodes[0].data
+		
+		var parameterValue = liList[i].childNodes[1].childNodes[1].value
+		// ensure all devices are selected
+		if(liList[i].childNodes[1].childNodes[1].options[selectDeviceIndex].value==="Select Device"){
+			alert("you need to select a device for each parameter")
+		}
+		var relatedDeviceId = liList[i].childNodes[1].childNodes[1].options[selectDeviceIndex].attributes[1].value
+		console.log(liList[i].childNodes[2].childNodes[1].options[selectLogicIndex].attributes[0])
+		if(liList[i].childNodes[2].childNodes[1].options[selectLogicIndex].attributes[0].value==="\"\"selected disabled hidden"){
+			alert("you need to select each device behavior")
+		}else{
+		var parameterLogic = liList[i].childNodes[2].childNodes[1].options[selectLogicIndex].attributes[0].value
+
+
+		parameterObject["relatedDeviceId"] = relatedDeviceId
+		parameterObject["parameterLogic"] = parameterLogic
+		// get parameter values 
+		if (parameterLogic === "onOnly") {
+			parameterObject["parameterValue"] = liList[i].childNodes[3].childNodes[4].value
+		} else if (parameterLogic === "onBetween") {
+			parameterObject["parameterValue"] = "{\"value1\":"+"\""+ liList[i].childNodes[3].childNodes[2].value + "\""+","+"\"value2\":"+"\""+ liList[i].childNodes[3].childNodes[3].value+"\""+"}"
+
+		}
+
+		parameterObject["automationId"] = '@ViewBag.automationId'
+		parameterObject["parameterTitle"] = parameterTitle
+		parameterObject["sensorId"] = liList[i].childNodes[1].childNodes[1].options[selectDeviceIndex].attributes[2].value
+		parametersList.push(parameterObject)
+		parameterObject = {}
+
+	}
+
+	var ajaxObject = {}
+	ajaxObject["parametersList"] = parametersList
+	console.log(ajaxObject)
+	$.ajax({
+		url: "../AddParameter",
+		method: "POST",
+		contentType: "application/json",
+		data: JSON.stringify(ajaxObject),
+		success: function(response) {
+
+			 window.location.href=response.url
+
+
+		}
+
+
+
+
+	})
+
+
+
+
+}}
+
+function removePar(sensorId) {
+
+	document.getElementById(`ul_${sensorId}`).removeChild(document.getElementById(`par${sensorId}`))
+	parametersCount--
+}
+
+function clickDevicesSelect(clickedselect) {
+
+	var sensorId = clickedselect.options[clickedselect.selectedIndex].attributes[2].value
+	var deviceId = clickedselect.options[clickedselect.selectedIndex].attributes[1].value
+	var selectList = document.getElementsByClassName("selectDevice")
+	console.log(selectList)
+	console.log(`sensorIdFromClicked${sensorId}`)
+	if (selectList.length > 1) {
+
+
+		for (var j = 0; j < selectList.length; j++) {
+
+			var selectFromListSensorId = selectList[j].options[selectList[j].selectedIndex].attributes[2].value
+			var selectFromListDeviceId = selectList[j].options[selectList[j].selectedIndex].attributes[1].value
+			console.log(`deviceIdFromClicked${deviceId}`)
+			console.log(`deviceIdFromListSelectedOption${selectFromListDeviceId}`)
+
+			if (sensorId == !selectFromListSensorId) {
+
+
+				if (selectFromListDeviceId === deviceId) {
+					alert("hello")
+
+
+
+				}
+
+			}
+
+
+
+
+		}
+
+
+	}
+
+
+
+
+}
+
+</script>

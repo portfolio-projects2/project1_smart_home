@@ -1,0 +1,457 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebServer.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebServer.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\certificate.crt",
+      "PackagePath": "staticwebassets\\certificate.crt"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\certificate.csr",
+      "PackagePath": "staticwebassets\\certificate.csr"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\certificate.key",
+      "PackagePath": "staticwebassets\\certificate.key"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\certificate.pem",
+      "PackagePath": "staticwebassets\\certificate.pem"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\css\\createParameterPage.css",
+      "PackagePath": "staticwebassets\\css\\createParameterPage.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\css\\startPage.css",
+      "PackagePath": "staticwebassets\\css\\startPage.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\SH.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\SH.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\WT.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\WT.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\battery-xxl-removebg-preview.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\battery-xxl-removebg-preview.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\cloud.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\cloud.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\dollar.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\dollar.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\download.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\download.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\dropdownImg.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\dropdownImg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\electrical_sensor.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\electrical_sensor.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\firstSection.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\firstSection.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\goldHouse.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\goldHouse.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\greenHouse-modified.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\greenHouse-modified.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\greenHouse-modified3.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\greenHouse-modified3.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\image.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\imgonline-com-ua-ReplaceColor-QH0aL8qSvgIiCIHh.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\imgonline-com-ua-ReplaceColor-QH0aL8qSvgIiCIHh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\kindpng_989275 - Copy.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\kindpng_989275 - Copy.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\kindpng_989275.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\kindpng_989275.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\mariola-grobelska-J9_pfhGVrJ4-unsplash.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\mariola-grobelska-J9_pfhGVrJ4-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\matt-gross-9aCkSl6YcXg-unsplash.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\matt-gross-9aCkSl6YcXg-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\mrr.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\mrr.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\off.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\off.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\on.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\on.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\output-onlinegiftools (1).gif",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\output-onlinegiftools (1).gif"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\output-onlinegiftools.gif",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\output-onlinegiftools.gif"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\pc7reEGKi.gif",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\pc7reEGKi.gif"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\radiation.gif",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\radiation.gif"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\scroll-down.gif",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\scroll-down.gif"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\secondSection.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\secondSection.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\smarthomegold-modified.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\smarthomegold-modified.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\smarthomegold.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\smarthomegold.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\temperature-2-512.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\temperature-2-512.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\testChart.html",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\testChart.html"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\turn-off-4781.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\turn-off-4781.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\wind.gif",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\wind.gif"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\wind.png",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\wind.png"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers-modified-modified-modified.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers-modified-modified-modified.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers-modified-modified.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers-modified-modified.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers-modified.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers-modified.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers.jpg",
+      "PackagePath": "staticwebassets\\lib\\startPageImages\\wp8726067-green-smoke-wallpapers.jpg"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\rootCA.csr",
+      "PackagePath": "staticwebassets\\rootCA.csr"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\rootCA.key",
+      "PackagePath": "staticwebassets\\rootCA.key"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\rootCA.pem",
+      "PackagePath": "staticwebassets\\rootCA.pem"
+    },
+    {
+      "Id": "C:\\Users\\45422\\Desktop\\BACKUPs\\All\\backUp\\Git\\AfgangsProjekt\\WebServer\\wwwroot\\test.pfx",
+      "PackagePath": "staticwebassets\\test.pfx"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.WebServer.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.WebServer.props",
+      "PackagePath": "build\\WebServer.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.WebServer.props",
+      "PackagePath": "buildMultiTargeting\\WebServer.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.WebServer.props",
+      "PackagePath": "buildTransitive\\WebServer.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

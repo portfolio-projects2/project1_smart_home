@@ -1,0 +1,152 @@
+﻿li {
+    margin-right: 20px;
+}
+
+ul {
+    display: flex
+}
+
+div {
+    margin-right: 20px;
+}
+
+.firstValue {
+    width: 170px;
+    height: 30px;
+    resize: none;
+    overflow: hidden;
+}
+
+.secondValue {
+    width: 170px;
+    height: 30px;
+    resize: none;
+    overflow: hidden;
+    position: relative;
+    top: -30.5px;
+    left: 200px;
+    margin-bottom: -30px;
+}
+.titleText {
+    position: relative;
+    top: -47px;
+    right: -380px;
+    margin-bottom: -40px;
+    color: #377037;
+}
+
+.sensorName {
+    color: #764747;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    display: inline-flex
+}
+.removeParameterButton {
+    border: #ff000000;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.textereaParameterValue {
+    width: 170px;
+    height: 30px;
+    resize: none;
+    overflow: hidden;
+    position: relative;
+}
+
+#addParameterText {
+    color: #561c21
+}
+
+
+
+p {
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.setValueText {
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #525066;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.addParameterButton {
+    border: #ff000000;
+    border-radius: 10px;
+    background:;
+    margin-left: 19px;
+    position: relative;
+    top: -4px;
+    width: 50px;
+    height: 35px;
+}
+
+.parameterText {
+    width: 160px;
+    height: 30px;
+    resize: none;
+    overflow: hidden;
+}
+
+.automationTitle {
+    color: dimgray;
+}
+
+.sensorsHeader {
+    font-size: 20px;
+    color: #06410b;
+}
+
+.roomTitle {
+    color: darkslategray;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.sensorsUl {
+    display: list-item;
+}
+
+.roomUl {
+    display: inline-table;
+}
+
+.parameterTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.parameterName {
+    cursor: pointer;
+    color: #4d4646;
+    font-size: large;
+}
+
+.choose {
+    color: darkgreen;
+    font-weight: 600;
+}
+
+.parameterValueText {
+    resize: none;
+    width: 65px;
+    height: 25px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    top: 5px;
+}
+
+.optionRoomName {
+    font-weight: bold;
+}
+
+.optionDeviceName {
+    font-weight: bold;
+}

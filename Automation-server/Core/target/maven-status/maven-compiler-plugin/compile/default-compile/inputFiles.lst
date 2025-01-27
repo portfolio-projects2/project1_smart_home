@@ -1,0 +1,17 @@
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\mocks\SystemModelsMock.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\mocks\HazelcastMock.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\subscribtions\IActiveTimeValidator.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\IAutomationHandler.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\AutomationHandler.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\SensorValueListener.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\WheatherApiConnection.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\presentation\FlowTracker.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\SensorObserver.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\subscribtions\ActiveTimeLogic.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\AutomationLogic.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\SystemInitilizer.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\mocks\DataBaseMock.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\subscribtions\ActivTimeValidator.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\ApiCommunications.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\HazelCastClientManagement.java
+C:\Users\45422\Desktop\Git\AfgangsProjekt\Automation-server\Core\src\main\java\afgangsProjekt\automation\domain\SystemStarter.java

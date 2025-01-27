@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+ <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>d0823380-41cd-401a-9750-5b8eab279047</UserSecretsId>
+  </PropertyGroup>
+
+
+ <ItemGroup>
+   <None Include="wwwroot\css\startPage.css" />
+   <None Include="wwwroot\lib\startPageImages\battery-xxl-removebg-preview.png" />
+   <None Include="wwwroot\lib\startPageImages\cloud.png" />
+   <None Include="wwwroot\lib\startPageImages\dollar.png" />
+   <None Include="wwwroot\lib\startPageImages\download.png" />
+   <None Include="wwwroot\lib\startPageImages\dropdownImg.jpg" />
+   <None Include="wwwroot\lib\startPageImages\electrical_sensor.png" />
+   <None Include="wwwroot\lib\startPageImages\greenHouse-modified.png" />
+   <None Include="wwwroot\lib\startPageImages\greenHouse-modified3.png" />
+   <None Include="wwwroot\lib\startPageImages\image.jpg" />
+   <None Include="wwwroot\lib\startPageImages\imgonline-com-ua-ReplaceColor-QH0aL8qSvgIiCIHh.jpg" />
+   <None Include="wwwroot\lib\startPageImages\kindpng_989275 - Copy.png" />
+   <None Include="wwwroot\lib\startPageImages\kindpng_989275.png" />
+   <None Include="wwwroot\lib\startPageImages\mariola-grobelska-J9_pfhGVrJ4-unsplash.jpg" />
+   <None Include="wwwroot\lib\startPageImages\matt-gross-9aCkSl6YcXg-unsplash.jpg" />
+   <None Include="wwwroot\lib\startPageImages\mrr.png" />
+   <None Include="wwwroot\lib\startPageImages\off.png" />
+   <None Include="wwwroot\lib\startPageImages\on.png" />
+   <None Include="wwwroot\lib\startPageImages\output-onlinegiftools (1).gif" />
+   <None Include="wwwroot\lib\startPageImages\output-onlinegiftools.gif" />
+   <None Include="wwwroot\lib\startPageImages\pc7reEGKi.gif" />
+   <None Include="wwwroot\lib\startPageImages\radiation.gif" />
+   <None Include="wwwroot\lib\startPageImages\scroll-down.gif" />
+   <None Include="wwwroot\lib\startPageImages\secondSection.png" />
+   <None Include="wwwroot\lib\startPageImages\SH.png" />
+   <None Include="wwwroot\lib\startPageImages\smarthomegold-modified.png" />
+   <None Include="wwwroot\lib\startPageImages\smarthomegold.jpg" />
+   <None Include="wwwroot\lib\startPageImages\temperature-2-512.png" />
+   <None Include="wwwroot\lib\startPageImages\testChart.html" />
+   <None Include="wwwroot\lib\startPageImages\transparent-wifi-icon-smart-home-icon-smarthome-icon-5faa6699002df2.1744784316050029050007.png" />
+   <None Include="wwwroot\lib\startPageImages\turn-off-4781.png" />
+   <None Include="wwwroot\lib\startPageImages\wind.gif" />
+   <None Include="wwwroot\lib\startPageImages\wind.png" />
+   <None Include="wwwroot\lib\startPageImages\wp8726067-green-smoke-wallpapers-modified (2).jpg" />
+   <None Include="wwwroot\lib\startPageImages\wp8726067-green-smoke-wallpapers-modified-modified-modified.jpg" />
+   <None Include="wwwroot\lib\startPageImages\wp8726067-green-smoke-wallpapers-modified-modified.jpg" />
+   <None Include="wwwroot\lib\startPageImages\wp8726067-green-smoke-wallpapers-modified.jpg" />
+   <None Include="wwwroot\lib\startPageImages\wp8726067-green-smoke-wallpapers.jpg" />
+   <None Include="wwwroot\lib\startPageImages\WT.png" />
+ </ItemGroup>
+
+  <ItemGroup>
+	  <!--<PackageReference Include="Hazelcast.Net" Version="5.1.1" />-->
+	  <PackageReference Include="Lucene.Net" Version="3.0.3" />
+	  <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="7.0.1" />
+	  <PackageReference Include="Microsoft.AspNetCore.DataProtection.Abstractions" Version="7.0.1" />
+	  <PackageReference Include="Microsoft.AspNetCore.DataProtection.Extensions" Version="7.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.12">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	 
+	  
+	  <PackageReference Include="Microsoft.Graph" Version="4.49.0" />
+	  <PackageReference Include="Microsoft.Identity.Web" Version="1.25.5" />
+	  <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+	  <PackageReference Include="Microsoft.Identity.Web.MicrosoftGraph" Version="1.25.5" />
+
+	  <!--<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />-->
+	  <PackageReference Include="Nancy" Version="2.0.0" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+	  <PackageReference Include="System.Security.Permissions" Version="6.0.0" />
+
+	  
+	  <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+	  <PackageReference Include="Pomelo.Extensions.Caching.MySql" Version="2.1.2" />
+  </ItemGroup>
+
+</Project>

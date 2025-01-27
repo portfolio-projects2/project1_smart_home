@@ -1,0 +1,132 @@
+version: "3.5"
+services:
+
+    # proxy-service:
+    #     hostname: proxy
+    #     build: ./R-proxy/.
+    #     ports:
+    #         - "80:80"
+    #         - "443:443"
+    #     restart: always
+    #     networks:
+    #         network:
+    #          ipv4_address: 172.29.0.7
+
+
+    sensors-service:
+        hostname: Sensors
+        container_name: SensorsContainer
+        build: ./Sensors-server/.
+        environment:
+            - broker=tcp://eu1.cloud.thethings.network:1883
+            - appId=sensorsapp@ttn
+            - accessKey=NNSXS.XLA4GF5VPTJDGLOOSWIFPFYKD4AI6RILEIDEEVQ.5M55Q4BMSZQCED4MYMRA3HKXUCKJMEJWKGOP6754ZX2WWQFKKILA
+            - cluster=172.29.0.5
+        ports:
+            - "9090:9090"
+        restart: always
+        networks:
+            network:
+             ipv4_address: 172.29.0.5
+        depends_on:
+            - web-service   
+  
+  
+  
+    automation-service:
+        hostname: automation
+        environment:
+            - dataSource=docker        
+            - cluster=172.29.0.5
+            - env=development
+        depends_on:
+            - web-service    
+        container_name: AutomationContainer
+        build: ./Automation-server/
+        ports:
+            - "8080:8080"
+        restart: always
+        networks:
+            network:
+             ipv4_address: 172.29.0.4
+  
+  
+  
+    web-service:
+        hostname: web
+        build: ./WebServer/
+        environment:
+            - dataSource=docker
+            - CORS=http://host.docker.internal:8080
+            - ASPNETCORE_URLS=http://*:5000;https://*:5001
+            - ASPNETCORE_Kestrel__Certificates__Default__Path=//app/wwwroot/test.pfx
+            - ASPNETCORE_Kestrel__Certificates__Default__Password=nawras67
+            - ASPNETCORE_HTTPS_PORT=5001 
+            - liveDataUrl=NginX
+        ports:
+            - "5000:5000"
+            - "5001:5001"
+        restart: always
+        networks:
+            network:
+             ipv4_address: 172.29.0.3
+       # depends_on:
+            #- proxy-service    
+            
+
+    # second-web-service:
+    #     hostname: web
+    #     build: ./WebServer2/
+    #     environment:
+    #         - dataSource=docker
+    #         - CORS=http://host.docker.internal:8080
+    #         - ASPNETCORE_URLS=http://*:5002;https://*:5003
+    #         - ASPNETCORE_Kestrel__Certificates__Default__Path=//app/wwwroot/test.pfx
+    #         - ASPNETCORE_Kestrel__Certificates__Default__Password=nawras67
+    #         - ASPNETCORE_HTTPS_PORT=5003 
+    #     ports:
+    #         - "50002:5002"
+    #         - "5003:5003"
+    #     restart: always
+    #     networks:
+    #         network:
+    #          ipv4_address: 172.29.0.9
+    #    # depends_on:
+    #         #- proxy-service    
+   
+    management-center:
+        image: hazelcast/management-center
+        ports:
+            - 8081:8080
+        networks:
+            network:
+             ipv4_address: 172.29.0.2
+ 
+ 
+ 
+    mqtt-device-Server:
+        image: 6711/mqtt-sub
+        networks:
+            network:
+              ipv4_address: 172.29.0.6
+
+
+    rest-device-Server:
+        image: 6711/rest-sub
+        networks:
+            network:
+              ipv4_address: 172.29.0.8              
+              
+                          
+
+networks:
+  network:
+    ipam:
+      config:
+        - subnet: 172.29.0.0/16
+          gateway: 172.29.0.1
+   
+      
+
+
+    #Environments: development, production

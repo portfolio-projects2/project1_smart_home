@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/CommonMqtt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CommonRest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CommonSerialPort/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Core/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MqttConnector/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Persistence1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Persistence2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RestConnector/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerialPortConnector/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SystemManager/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

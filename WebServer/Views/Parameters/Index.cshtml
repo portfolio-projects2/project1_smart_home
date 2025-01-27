@@ -1,0 +1,121 @@
+﻿@using Newtonsoft.Json.Linq
+@model IEnumerable<WebServer.Models.Parameter>
+
+@{
+    ViewData["Title"] = "Index";
+    List<Automation> automations = ViewBag.automations;
+}
+<head><link rel="stylesheet" href="~/css/site.css"  /> </head>
+
+<h1>Parameters List</h1>
+
+<p> 
+    You can add a new parameter for each device joining an automation process.</p>
+    <p>If the automation process has parameters for all devices you nedd to remove a parameter in order to add a new parameter</p>
+
+    <p>choose an automation to add parmaeter : <select>
+        
+        @foreach(var a in automations)
+        {
+            int devicesCount = @a.automationDevices.Count();
+            int parameterCount = @a.AutomationParameters.Count();
+            int dif = (devicesCount - parameterCount);
+            <option>Automation:  <p><text style="color:wheat;" class ="autTitle">"@a.automationTitle"</text>  has @devicesCount Devices and @parameterCount Parameters
+                    @if (dif == 0)
+                    {
+                        <p style="color:red"> (Remove a parameter to add a new one for this automation)  </p>
+                    }
+                    else
+                    {
+                        <p style="color:green"> (You can add @dif parameters for this automation)</p> <input type="button" class="addpar" onclick='create(@a.Id)' value="Add New Parameter"  /> 
+
+                    }
+
+                        
+                            
+
+             </p></option>
+
+            
+        }
+        
+        
+    
+    </select>  </p> 
+
+    <a class="backParList" href="/">Back to Dashboard</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.parameterTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parameterLogic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.parameterValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sensor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.device)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.automation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.parameterTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.parameterLogic)
+            </td>
+            <td>
+                  @if (item.parameterLogic.Equals("onOnly"))
+                    {
+                        @Html.DisplayFor(modelItem => item.parameterValue)
+
+                    }else{
+                        try{
+                        JObject jObject = JObject.Parse(item.parameterValue);
+                        <p style="color:red">Value1 : @jObject["value1"]</p> <p style="color:blue">Value2 : @jObject["value2"]</p>
+                        }catch{};
+                        }
+                    
+            </td>
+            <td>
+                 
+                @Html.DisplayFor(modelItem => item.sensor.sensorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.device.deviceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.automation.automationTitle)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<script>
+
+    function create (autId){
+        window.location.href=`parameters/create/${autId}`
+
+
+    }
+
+
+</script>

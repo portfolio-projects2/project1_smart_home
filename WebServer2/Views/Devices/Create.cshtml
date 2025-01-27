@@ -1,0 +1,66 @@
+﻿@model WebServer.Models.Device
+
+@{
+    ViewData["Title"] = "Create";
+   
+
+    List<Room> rooms = ViewBag.rooms;
+}
+
+<h1>Add New Device</h1>
+
+<h4>Device</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="deviceName" class="control-label"></label>
+                <input asp-for="deviceName" class="form-control" />
+                <span asp-validation-for="deviceName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="room" class="control-label"></label>
+                <select asp-for="roomId" class ="form-control" >
+                    @foreach(var a in rooms)
+                    {
+                        <option value=@a.Id>@a.roomTitle</option>
+                    }
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="communicationProvider" class="control-label"></label>
+                <select asp-for="communicationProvider" class="form-control">
+                    <option value="mqtt1">Mqtt1</option>
+                    <option value= "rest1">Rest1</option>
+                    <option value= "Serial">SerialPort</option>
+
+                </select>
+                <span asp-validation-for="communicationProvider" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script>
+
+(function(){
+    if(@rooms.Count()==0){
+alert("You can not add a device before adding at least one room")
+    window.location.href="../rooms"
+    }
+      
+})()
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

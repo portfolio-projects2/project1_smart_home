@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebServer
+build_property.RootNamespace = WebServer
+build_property.ProjectDir = C:\Users\45422\Desktop\BACKUPs\All\backUp\Git\AfgangsProjekt\WebServer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\45422\Desktop\BACKUPs\All\backUp\Git\AfgangsProjekt\WebServer
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Automations/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b21hdGlvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Automations/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b21hdGlvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Automations/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b21hdGlvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Automations/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b21hdGlvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Automations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b21hdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Devices/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Devices/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Devices/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Devices/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Devices/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/EnergySourceDevices/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5U291cmNlRGV2aWNlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/EnergySourceDevices/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5U291cmNlRGV2aWNlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/EnergySourceDevices/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5U291cmNlRGV2aWNlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/EnergySourceDevices/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5U291cmNlRGV2aWNlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/EnergySourceDevices/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5U291cmNlRGV2aWNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Parameters/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Parameters/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Parameters/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Parameters/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Parameters/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Rooms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Rooms/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Rooms/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Rooms/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Rooms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Sensors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vuc29yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Sensors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vuc29yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Sensors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vuc29yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Sensors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vuc29yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Sensors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Vuc29yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45422/Desktop/BACKUPs/All/backUp/Git/AfgangsProjekt/WebServer/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-goiz0xmca9

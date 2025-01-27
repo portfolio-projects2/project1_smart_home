@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebServer.Models.Device>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Devices List</h1>
+<p>Here you can See, Add, Edit, Remove devices</p>
+
+<p>
+    <a asp-action="Create">Create New Device</a>
+        <a class="back" href="/">Back to Dashboard</a>
+
+</p>
+<h2>Devices</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.deviceName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.communicationProvider)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.deviceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.room.roomTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.communicationProvider)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

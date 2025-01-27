@@ -1,0 +1,53 @@
+
+<script>
+  
+</script>
+const innerDataset = {
+  data: [1, 3, 4],
+  backgroundColor: ['#1f77b4', '#ff7f0e', '#2ca02c'],
+  labels: ['InnerLabel1', 'InnerLabebl2', 'InnerLabel3'],
+};
+
+var myChart = new Chart('myChart', {
+  type: 'pie',
+  data: {
+    datasets: [{
+        data: [1, 2, 1, 4],
+        backgroundColor: ['rgba(31,119,180,0.5)', 'rgba(255,127,14,0.5)', 'rgba(255,127,14,0.5)', 'rgba(44,160,44,0.5)'],
+        labels: ['OuterLabel1', 'OuterLabel2', 'OuterLabel3', 'OuterLabel4']
+      },
+      innerDataset
+    ]
+  },
+  options: {
+    responsive: true,
+    legend: {
+      display: true,
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem, data) {
+          var dataset = data.datasets[tooltipItem.datasetIndex];
+          var index = tooltipItem.index;
+          return dataset.labels[index] + ': ' + dataset.data[index];
+        }
+      }
+    },
+    legend: {
+      labels: {
+        generateLabels: () => innerDataset.labels.map((label, i) => ({
+          text: label,
+          fillStyle: innerDataset.backgroundColor[i],
+          strokeStyle: '#fff',
+          hidden: myChart ? myChart.getDatasetMeta(1).data[i].hidden : false
+        }))
+      },
+      onClick: (event, legendItem) => {        
+        const metaData = myChart.getDatasetMeta(1).data;
+        const iData = innerDataset.labels.indexOf(legendItem.text);
+        metaData[iData].hidden = !metaData[iData].hidden;
+        myChart.update();
+      }
+    }
+  }
+});

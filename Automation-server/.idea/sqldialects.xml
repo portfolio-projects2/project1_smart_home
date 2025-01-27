@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Persistence1/src/main/java/afgangsProjekt/automation/database1/DataAccess.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Persistence2/src/main/java/afgangsProjekt/automation/database2/DataAccess.java" dialect="GenericSQL" />
+  </component>
+</project>

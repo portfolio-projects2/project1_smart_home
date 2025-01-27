@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.back {
+    text-decoration: wavy;
+    font-size: 25px;
+    position: relative;
+    top: -67px;
+    left: 1071px;
+    color: dodgerblue;
+    /* background: gainsboro; */
+    border-radius: 5px;
+    font-weight: 4000;
+}
+.addpar {
+    margin-left: 10px;
+    height: 26px;
+}
+.backParList {
+    color: dodgerblue;
+    text-decoration: wavy;
+}

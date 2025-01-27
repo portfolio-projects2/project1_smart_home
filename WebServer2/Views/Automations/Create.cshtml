@@ -1,0 +1,621 @@
+﻿@using Newtonsoft.Json.Linq
+@using System.Diagnostics
+@model WebServer.Models.Automation
+
+@{
+          ProjectDbContext _context = ViewBag.context;
+    ViewData["Title"] = "Create";
+}
+@{
+
+
+    List<Device> devices= _context.Device.ToList();
+    List<Sensor> sensors= _context.Sensor.ToList();
+    List<Room> rooms= _context.Room.ToList();
+    List<EnergySourceDevice> energySources = _context.EnergySourceDevice.ToList();
+
+ var counter=0;
+
+    }
+
+
+    <style>
+    ul h6{
+        font-size: 20px;
+    color: #756a6a;
+    }
+    ul li input{    font-size: 15px;
+    margin-right: 10px;  }
+    .check{
+        margin-left: 10px;
+    margin-bottom: 20px;
+      
+    }
+    .selectTime{
+        border:none;
+    }
+
+    </style>
+
+<h1>Add new automation process</h1>
+
+<p>Here you can create a new automation process and add rooms, device, and sensors to it by choosing from the list below.
+<br />
+You can also set the time conditions for the choosen devices at this automation process.
+
+</p>
+ <div >
+                 <div>
+                <label style="font-weight:600; margin-bottom:20px">Automation title </label>
+                <input type="text" id="automationTitle"/> 
+              
+            </div>
+            <div>
+                <label style="font-weight:600; margin-bottom:20px">Select Energy Source </label>
+               <select id="energySourceSelect">
+            @foreach(var es in energySources)
+            {
+            <option value=@es.Id>@es.title</option>    
+            }
+            
+               </select>
+              
+            </div>
+            
+            <label style="font-weight:600;" > Automation status</label>
+               <select id ="activeSelect">
+                   <option>active</option>
+                   <option>not active</option>
+               </select>
+            </div>
+            <br />
+             <div>
+                <label style="font-weight:600; margin-bottom:20px">Automation Time Range: from </label>
+                <input type="datetime-local" id="autStart"/>
+              to 
+               <input type="datetime-local" id="autOff"/>
+            </div>
+           
+<div>
+    <h4>Rooms</h4>
+    <ul>
+        @foreach (var room in rooms)
+        {
+            
+            <li>
+                <h5 style="color: #464646;font-family: cursive;"> @room.roomTitle </h5>
+                <ul>
+                  <h6>Sensors</h6>  
+                 @foreach (var sensor in sensors)
+                    {
+                        if (sensor.roomId == @room.Id)
+                        {
+                             counter++; 
+                        <li class="sensorLi">
+                            <div> @sensor.sensorName<input class="check" room='@room.Id' sensor='@sensor.Id' type="checkbox" id="checkSensor'@counter'" /> </div>
+                             </li>  
+                          }
+                        }
+                       
+                </ul>
+                <ul>
+                  <h6>Devices</h6>  
+                 @foreach (var device in devices)
+                    {
+                        if (device.roomId == @room.Id)
+                        {
+                           counter++; 
+                        <li class="deviceLi">
+                            <div> @device.deviceName  <input type="checkbox" class="check" room='@room.Id' device='@device.Id' id="check_@device.Id"  /> </div>
+                               <div class= "div_@device.Id" style="display:none">
+                          </li>   
+                        }
+ 
+                          }
+                </ul>
+
+            </li>
+
+        }
+
+    </ul>
+
+
+
+</div>
+
+<button onclick="saveConfig()">Add automation parameters</button>
+
+
+
+<script>
+
+    (function(){
+        if(@rooms.Count()==0||@devices.Count()==0){
+
+            alert("You need to add one room & one device at least to add an automation process")
+            window.location.href= "./"
+        
+        }
+       
+       
+
+    })()
+   
+    var autObject ={}
+
+function saveConfig(){
+    var startTimeMap= new Map()
+    var offTimeMap= new Map()
+    var devicesList=[]
+    var sensorsList=[]
+    var sensorsLiList = document.getElementsByClassName("sensorLi")
+    var devicesLiList = document.getElementsByClassName("deviceLi")
+
+    console.log(sensorsLiList)
+    for(var i=0;i<sensorsLiList.length;i++){
+  if(sensorsLiList[i].childNodes[1].childNodes[1].checked){
+    console.log("checked")
+    
+    var sensorId=sensorsLiList[i].childNodes[1].childNodes[1].getAttribute('sensor')
+    sensorsList.push(sensorId)
+
+         }
+
+    }
+
+     for(var i=0;i<devicesLiList.length;i++){
+if(devicesLiList[i].childNodes[1].childNodes[1].checked){
+    console.log("checked")
+    
+    var device=devicesLiList[i].childNodes[1].childNodes[1].getAttribute('device')
+    devicesList.push(device)
+    
+ 
+
+            
+
+             }
+
+}
+var startDate = new Date(document.getElementById("autStart").value)
+var offDate = new Date(document.getElementById("autOff").value)
+    autObject["automationTimeRange"]=JSON.parse(
+    "{\"start\":"+"\""+format(startDate)+"\""+",\"off\":"+"\""+ format(offDate)+"\"}"
+    )
+    autObject["sensors"]=sensorsList
+    autObject["devices"]=devicesList
+    autObject["energySource"]= document.getElementById("energySourceSelect").value
+     autObject['automationTitle']= document.getElementById('automationTitle').value
+     if(document.getElementById('activeSelect').value=="active"){
+
+                 autObject['automationState']='1'
+              }else{ajaxObject['automationState']='0'}
+    console.log(autObject)
+    if(devicesList.length==0||sensorsList.length==0){
+        alert("you need to choose at least  one device and one sensor to add an automation process")}
+    else if(autObject['automationTitle']==""){
+        alert("Automation Title can not be empty")
+    }
+    else if(timeRangeValid(startDate,offDate)==false){
+        alert("timeRangeNotValid")
+    }
+    else{
+   $.ajax({
+
+        url:"./create",
+        method:"POST",
+        async:false,
+        contentType:"application/Json",
+        data: JSON.stringify(autObject),
+        success: function(response,a){
+            console.log(a)
+            window.location.href=response.url
+        },
+        error: function(xhr, status, error){
+            alert(xhr.responseText)
+        }
+
+
+
+    })
+    }
+
+ 
+
+
+
+  }
+
+  function timeRangeValid(startDate,offDate){
+    //  var dateStrA = "28/12/2013 16:20:22".replace( /(\d{2})\/(\d{2})\/(\d{4})/, "$2/$1/$3");
+
+      if(startDate<offDate){
+        return true
+      }else{return false}
+
+      
+  }
+
+          
+            function format(dateTime) {
+    var d = new Date(dateTime),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear(),
+        hour=d.getHours(),
+        minutes=d.getMinutes();
+
+    if (month.length < 2) 
+        month = '0' + month;
+    if (day.length < 2) 
+        day = '0' + day;
+    if(`${hour}`.length<2)    
+        hour='0'+hour;
+    if(`${minutes}`.length<2)
+        minutes='0'+minutes;    
+    return [day,month,year,hour,minutes].join('-');
+}
+   
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<hr />
+<div class="row">
+    <div class="col-md-4">
+        
+            <div class="form-group">
+                <label > automation status</label>
+               <select id ="activeSelect">
+                   <option>active</option>
+                   <option>not active</option>
+               </select>
+            </div>
+            <div>
+                <label>Automation title </label>
+                <input type="text" id="automationTitle"/> 
+              
+            </div>
+            <div>
+                <label>automation configuration </label>
+            <div >
+                <ul style="display: inline-flex;" multiple>
+
+                    @foreach (var keyValue in ViewBag.roomsInfo)
+                    {
+
+                        KeyValuePair<string, Dictionary<List<sensors>, List<devices>>> dic = keyValue;
+
+
+                        string room = dic.Key;
+
+
+                        <li id="li_@room" style="margin-left: 200px;"> @room<input type="checkbox" id=@room onclick=test('@room') />
+                            @foreach(var sensDevsListPair in dic.Value){
+                            <ul id="devices_@room" style="display:none">
+                                <label style="color:blue">List of devices</label>
+                                @foreach (var device in sensDevsListPair.Value)
+                                {
+                                    string deviceName = device.deviceName;
+
+                                    <li id="li_@deviceName">@deviceName<input type="checkbox" id=@deviceName onclick=test2('@deviceName','@room') />
+                                    <div  id=behavior_@deviceName style="display:none;">
+                                   <text> @deviceName will automatically start when minValue of your all sensorsParameters are satesfied and time condition is satisfied</text>
+                                   <text>Here you can set the time conditions</text>      
+                                   <div >
+                                     <label style="color:green">Start time</label>
+                                  
+                                    
+                                   <label>day</label>
+                                    <select id=startTime_day_@room@deviceName></select>
+                                   <label>month</label>
+                                   
+                                    <select id=startTime_month_@room@deviceName></select>
+                                    <label>Hour</label>
+                                   
+                                    <select id=startTime_hour_@room@deviceName></select>
+                                    <label>Minute</label>
+                                   
+                                    <select id=startTime_minute_@room@deviceName></select>
+                                   </div> 
+                                  
+                                    <div >
+                                     <label style="color:red">Off time</label>
+                                  
+                                    
+                                   <label>day</label>
+                                    <select id=offTime_day_@room@deviceName></select>
+                                   <label>month</label>
+                                   
+                                    <select id=offTime_month_@room@deviceName></select>
+                                    <label>Hour</label>
+                                   
+                                    <select id=offTime_hour_@room@deviceName></select>
+                                    <label>Minute</label>
+                                   
+                                    <select id=offTime_minute_@room@deviceName></select>
+                                   </div> 
+                                        <button onclick=deviceBehavior('@room','@deviceName')>submit</button>
+                                         </div>
+                                    
+                                   
+
+
+                                </li>
+
+                                }
+                            </ul>
+                             <ul id="sensors_@room" style="display:none">
+                                 <label style="color:blue">List of sensors</label>
+                                @foreach (var sensor in sensDevsListPair.Key)
+                                {
+                                    string sensorName = sensor.sensorName;
+
+                                    <li id="li_@sensorName">@sensorName <input type="checkbox" id=@sensorName@room onclick=test3('@sensorName@room') />
+                                    <div id=behavior_@sensorName@room style="display:none">
+                                    <label> fill sensor parameters     </label>
+                                                @{
+                                                    List<sensorParameters> sp = _context.sensorParameters.Where(a => (a.sensorId == sensor.Id)).ToList(); 
+                                                    foreach(sensorParameters parameter in sp)
+                                                    {
+                                                        Debug.WriteLine("gggggg"+parameter.parameterTitle);
+                                                        var o = parameter.parameterTitle;
+                                                        <div id="fillDiv">
+                                                        
+                                                        <label>@o</label>
+                                                        <textarea id=@room@sensorName@o></textarea>
+                                                        </div>
+                                                       
+                                                        <button onclick=setparametersValue('@room','@sensorName','@o')    >submit</button>
+                                                    }
+                                                }
+                                    </div></li>
+
+                                }
+                            </ul>
+
+}
+                        </li>
+
+
+                    }
+                </ul>
+
+            </div>
+
+
+            <div class="form-group">
+            </div>
+
+
+        </>
+    </div>
+</div>
+<div><button onclick=createAutomation()> create automation</button></div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+<script>
+
+    function test(room)
+            {
+            console.log(room)
+            if(document.getElementById(room).checked)
+            {
+            document.getElementById(`devices_${room}`).setAttribute("style","display:inline-grid")
+            document.getElementById(`sensors_${room}`).setAttribute("style","display:inline-grid")      
+            console.log(room)
+            }else{
+            document.getElementById(`devices_${room}`).setAttribute("style","display:none")
+            document.getElementById(`sensors_${room}`).setAttribute("style","display:none")
+
+            }
+            }
+    function test2(device,room)
+            {
+
+            if(document.getElementById(device).checked)
+            {
+            document.getElementById(`behavior_${device}`).setAttribute("style","width: 400px;display:grid")
+
+                for(var i=0;i<31;i++){
+        
+        if(i<10){
+
+           var option= document.createElement("option")
+           var option1= document.createElement("option")
+           option1.append("0"+i)
+           option.append("0"+i)
+           document.getElementById(`startTime_day_${room}${device}`).append(option)
+           document.getElementById(`offTime_day_${room}${device}`).append(option1)
+
+        }else{
+            var option= document.createElement("option")
+            var option1= document.createElement("option")
+          option1.append(i)
+           option.append(i)
+            document.getElementById(`startTime_day_${room}${device}`).append(option)
+            document.getElementById(`offTime_day_${room}${device}`).append(option1)
+
+        }
+    }
+      for(var i=0;i<13;i++){
+        
+        if(i<10){
+
+           var option= document.createElement("option")
+           var option1= document.createElement("option")
+          option1.append("0"+i)
+           option.append("0"+i)
+           
+           document.getElementById(`startTime_month_${room}${device}`).append(option)
+           document.getElementById(`offTime_month_${room}${device}`).append(option1)
+
+        }else{
+            var option= document.createElement("option")
+            var option1= document.createElement("option")
+          option1.append(i)
+           option.append(i)
+            document.getElementById(`startTime_month_${room}${device}`).append(option)
+            document.getElementById(`offTime_month_${room}${device}`).append(option1)
+
+        }
+    }
+          for(var i=0;i<25;i++){
+        
+        if(i<10){
+
+           var option= document.createElement("option")
+           var option1= document.createElement("option")
+          option1.append("0"+i)
+           option.append("0"+i)
+           document.getElementById(`startTime_hour_${room}${device}`).append(option)
+           document.getElementById(`offTime_hour_${room}${device}`).append(option1)
+
+        }else{
+            var option= document.createElement("option")
+            var option1= document.createElement("option")
+          option1.append(i)
+           option.append(i)
+            document.getElementById(`startTime_hour_${room}${device}`).append(option)
+            document.getElementById(`offTime_hour_${room}${device}`).append(option1)
+
+        }
+    }
+          for(var i=0;i<61;i++){
+        
+        if(i<10){
+
+           var option= document.createElement("option")
+           var option1= document.createElement("option")
+          option1.append("0"+i)
+           option.append("0"+i)
+           document.getElementById(`startTime_minute_${room}${device}`).append(option)
+           document.getElementById(`offTime_minute_${room}${device}`).append(option1)
+
+        }else{
+            var option= document.createElement("option")
+            var option1= document.createElement("option")
+          option1.append(i)
+           option.append(i)
+            document.getElementById(`startTime_minute_${room}${device}`).append(option)
+            document.getElementById(`offTime_minute_${room}${device}`).append(option1)
+        }
+    }
+
+
+
+
+
+            }else{
+            document.getElementById(`behavior_${device}`).setAttribute("style","display:none")
+      
+            
+            
+            }
+            }
+    function test3(sensor_room)
+            {
+
+            if(document.getElementById(sensor_room).checked)
+            {
+            document.getElementById(`behavior_${sensor_room}`).setAttribute("style","width: 400px;display:grid")
+
+            }else{
+            document.getElementById(`behavior_${sensor_room}`).setAttribute("style","display:none")
+            }
+            }
+
+            var sensorsConditioMap = new Map()
+            
+          function  setparametersValue(room,sensor,parameter){
+              var value = document.getElementById(`${room}${sensor}${parameter}`).value
+              
+              sensorsConditioMap.set(`{"room":"${room}","sensor":"${sensor}","parameter":"${parameter}"}`,value)
+              
+
+              
+              console.log(Object.fromEntries( sensorsConditioMap))
+              
+              
+
+          }
+
+          var devicesTimeMap= new Map()
+
+          function deviceBehavior(room,device){
+
+              var startTime = document.getElementById(`startTime_day_${room}${device}`).value+"-"+document.getElementById(`startTime_month_${room}${device}`).value+
+              "-"+document.getElementById(`startTime_hour_${room}${device}`).value+"-"+document.getElementById(`startTime_minute_${room}${device}`).value
+              var offTime =document.getElementById(`offTime_day_${room}${device}`).value+"-"+document.getElementById(`offTime_month_${room}${device}`).value+
+              "-"+document.getElementById(`offTime_hour_${room}${device}`).value+"-"+document.getElementById(`offTime_minute_${room}${device}`).value
+
+              devicesTimeMap.set(`{"room":"${room}","device":"${device}","parameter":"startTime"}`,startTime)
+              
+              devicesTimeMap.set(`{"room":"${room}","device":"${device}","parameter":"offTime"}`,offTime)
+
+              console.log(devicesTimeMap)
+          }
+          var ajaxObject={}
+
+
+          function createAutomation(){
+
+         
+              ajaxObject['automationTitle']= document.getElementById('automationTitle').value
+              if(document.getElementById('activeSelect').value=="active"){
+
+                 ajaxObject['automationState']='1'
+              }else{ajaxObject['automationState']='0'}
+              ajaxObject['devicesTime']= Object.fromEntries(devicesTimeMap)
+              ajaxObject['sensorsParameters']=Object.fromEntries( sensorsConditioMap)
+              var jsonObject=  JSON.stringify(ajaxObject)
+              $.ajax({
+    url: "../automations/Create",
+    method: "POST",
+    async:false,
+    contentType:"application/json",
+    data:jsonObject,
+    success: function(){alert("hello")},
+     error: function(xhr, status, error){alert(xhr.responseText)}
+
+
+});
+              console.log(JSON.stringify(ajaxObject))
+
+
+
+
+          }
+
+
+
+
+</script>
+
+@section Scripts{
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+
+
+        }
+*@

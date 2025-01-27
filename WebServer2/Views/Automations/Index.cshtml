@@ -1,0 +1,79 @@
+﻿@using Newtonsoft.Json.Linq
+@model IEnumerable<WebServer.Models.Automation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Automation Center</h1>
+<p>Here you can see all automation processes.</p>
+
+<p>
+    <a asp-action="Create">Create New Automation process</a>
+    <a class="back" href="/">Back to Dashboard</a>
+</p>
+<h2>Automations</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                
+                @Html.DisplayNameFor(model => model.active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.automationTitle)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.automationTimeRange)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            <tr>
+                <td>
+                    @if (item.active == 1)
+                    {
+                       <p>Active</p>
+                    }else{<p>Inactive</p>}
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.automationTitle)
+            </td>
+            <td>
+                 @try{
+                        JObject jObject = JObject.Parse(item.automationTimeRange);
+                       <label style="color:red">Start date :</label> <p> @jObject["start"]</p> <label style="color:blue">Off date :</label> <p> @jObject["off"]</p>
+                        }catch{}            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+
+
+</tbody>
+</table>
+<script>
+  function a(){
+$.ajax({
+   // dataType:"jsonp",
+    url:"http://localhost:8080/startDeviceManually/1",
+    method:"GET",
+    success:function(r,b,s) {
+        console.log(r)
+        console.log(b)
+        console.log(s)
+    
+    }
+   
+
+})
+  }
+
+
+
+</script>

@@ -1,0 +1,16 @@
+afgangsProjekt\automation\domain\SystemInitilizer.class
+afgangsProjekt\automation\domain\SensorObserver.class
+afgangsProjekt\automation\domain\IAutomationHandler.class
+afgangsProjekt\automation\domain\subscribtions\ActiveTimeLogic.class
+afgangsProjekt\automation\domain\WheatherApiConnection.class
+afgangsProjekt\automation\domain\AutomationHandler.class
+afgangsProjekt\automation\domain\subscribtions\ActivTimeValidator.class
+afgangsProjekt\automation\domain\mocks\HazelcastMock.class
+afgangsProjekt\automation\domain\AutomationLogic.class
+afgangsProjekt\automation\domain\subscribtions\IActiveTimeValidator.class
+afgangsProjekt\automation\domain\HazelCastClientManagement.class
+afgangsProjekt\automation\domain\mocks\DataBaseMock.class
+afgangsProjekt\automation\domain\ApiCommunications.class
+afgangsProjekt\automation\domain\SystemStarter.class
+afgangsProjekt\automation\presentation\FlowTracker.class
+afgangsProjekt\automation\domain\mocks\SystemModelsMock.class

@@ -1,0 +1,62 @@
+﻿@using System.Diagnostics
+@model WebServer.Models.Sensor
+
+@{
+    ViewData["Title"] = "Create";
+        List<Room> rooms = ViewBag.rooms;
+
+}
+
+<h1>Add New sensor</h1>
+<p> Here you can add a new sensor to the system</p>
+<h4>Sensor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="sensorName" class="control-label"></label>
+                <input asp-for="sensorName" class="form-control" />
+                <span asp-validation-for="sensorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="devId" class="control-label"></label>
+                <input asp-for="devId" class="form-control" />
+                <span asp-validation-for="devId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="room" class="control-label"></label>
+                <select asp-for="roomId" class ="form-control" >
+                    @foreach(var a in rooms)
+                    {
+                        <option value=@a.Id>@a.roomTitle</option>
+                    }
+
+                </select>            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+<script>
+(function(){
+    if(@rooms.Count()==0){
+alert("You can not add a sensor before adding at least one room")
+    window.location.href="../rooms"
+    }
+      
+})()
+
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <envs>
+      <env name="broker" value="tcp://eu1.cloud.thethings.network:1883" />
+      <env name="appId" value="sensorsapp@ttn" />
+      <env name="accessKey" value="NNSXS.XLA4GF5VPTJDGLOOSWIFPFYKD4AI6RILEIDEEVQ.5M55Q4BMSZQCED4MYMRA3HKXUCKJMEJWKGOP6754ZX2WWQFKKILA" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="domain.Main" />
+    <module name="Sensors-server" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="domain.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

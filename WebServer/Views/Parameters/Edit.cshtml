@@ -1,0 +1,113 @@
+﻿@model WebServer.Models.Parameter
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Parameter</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div  class="form-group">
+                <label asp-for="parameterTitle" class="control-label"></label>
+                <input asp-for="parameterTitle" class="form-control" />
+                <span asp-validation-for="parameterTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="parameterLogic" class="control-label"></label>
+                <select id="selectLogic" asp-for="parameterLogic" class="form-control" >
+                  
+                    <option value="onOnly">OnOnly</option>
+                    <option value="onBetween">OnBetween</option>
+
+                    </select>
+                    <span asp-validation-for="parameterLogic" ></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="parameterValue" class="control-label"></label>
+                <div id="one" style="display:none"><input  id ="input1" class="form-control" /></div>
+                <div id="two" style="display:none">
+                    <label>value1</label>
+                <input  id ="input2"  class="form-control" />
+                <label>value2</label>
+                <input  id ="input3"  class="form-control" />
+
+                </div>
+                
+       <input type="hidden" id="inputLast" asp-for="parameterValue" class="form-control" />
+
+              
+            </div>
+          
+            <input type="hidden" asp-for="sensorId"></input>
+            <input type="hidden" asp-for="deviceId" ></input>
+             <input type="hidden" asp-for="automationId"></input>
+              
+            <div class="form-group">
+                <input id="submit"  type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+<script>
+    (function() {
+ if(document.getElementById("selectLogic").value=="onOnly"){
+        document.getElementById("one").style.display="block"
+         document.getElementById("two").style.display="none"
+
+    }else{
+         document.getElementById("two").style.display="block"
+         document.getElementById("one").style.display="none"
+
+    }
+
+
+})();
+
+
+
+document.getElementById("selectLogic").addEventListener("change",function(){
+    if(document.getElementById("selectLogic").value=="onOnly"){
+        document.getElementById("one").style.display="block"
+         document.getElementById("two").style.display="none"
+
+    }else{
+         document.getElementById("two").style.display="block"
+         document.getElementById("one").style.display="none"
+
+    }
+
+})
+
+document.getElementById("submit").addEventListener("click",function(){
+ var parValue=  document.getElementById("inputLast")
+ console.log("nkjnkjnkjn")
+ if(document.getElementById("selectLogic").value=="onOnly"){
+     parValue.value= document.getElementById("input1").value
+ }else if(document.getElementById("selectLogic").value=="onBetween"){
+     console.log("here")
+     parValue.value= "{\"value1\":"+"\""+document.getElementById("input2").value+"\""+",\"value2\":"+"\""+document.getElementById("input3").value+"\"}"
+ }
+
+
+
+})
+
+
+
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
